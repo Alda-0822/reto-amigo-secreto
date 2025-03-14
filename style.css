@@ -26,8 +26,10 @@ body {
 .main-content {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100%;
     width: 100%;
+    
 }
 
 /* Banner */
@@ -44,12 +46,14 @@ body {
     flex: 60%;
     background-color: var(--color-secondary);
     border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
+    border-radius: 64px 64px 64px 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 100%;
+    margin-bottom: 100%;
+    width: 70%;
+    
 }
 
 /* Títulos */
@@ -88,8 +92,12 @@ body {
 }
 
 .button-container {
-    width: 300px;
-    justify-content: center;
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+    
 }
 
 /* Estilos de entrada de texto */
@@ -106,10 +114,12 @@ body {
 
 /* Estilos de botón */
 button {
-    padding: 15px 30px;
+    
+    width: 250px;
+    padding: 0 15px 0 15px;
     font-family: "Inter", sans-serif;
     font-size: 16px;
-    border: 2px solid #000;
+    /* }border: 2px solid #000; */
     border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -123,15 +133,52 @@ button {
 
 .button-add:hover {
     background-color: #a1a1a1;
+    
 }
 
+.button-draw{
+    width: 250px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+.button-draw:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.reinicioImg {
+    width: 35px;
+    height: 35px;
+}
+
+p {
+    margin: 5px;
+    font-family: "Inter", sans-serif;
+}
+
+.sorteo {
+    margin: 15px;
+    font-family: "Inter", sans-serif;
+}
 /* Listas */
 ul {
-    list-style-type: square;
+    list-style-type: none;
     color: var(--color-text);
     font-family: "Inter", sans-serif;
     font-size: 20px;
     margin: 20px 0;
+    gap: 10px;
 }
 
 .result-list {
@@ -140,6 +187,19 @@ ul {
     font-size: 22px;
     font-weight: bold;
     text-align: center;
+    /* border: solid #000 3px; */
+}
+
+.name-list{
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    /* border: 2px solid #333; */
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
 }
 
 /* Botón de sortear título */
@@ -159,4 +219,5 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+
 }
