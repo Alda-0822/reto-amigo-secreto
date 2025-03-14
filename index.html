@@ -21,21 +21,35 @@
             <h2 class="section-title">Digite el nombre de sus amigos</h2>
             <div class="input-wrapper">
                 <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
-                <button class="button-add" onclick="agregarAmigo();">Añadir</button>
-                
+                <button id="botonTexto" class="button-add añadir" onclick="agregarAmigo();">Añadir</button>
+                                
             </div>
-           <div>
-            <h3 id ="alerta"></h3>
-           </div>
+            <div>
+                <p id="alerta"></p>
+                <p id="repeticion"></p>
+            </div>
             <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
-            <ul id="resultado" class="result-list" aria-live="polite"></ul>
+            <h3 id="resultado" class="result-list" aria-live="polite"></h3>
 
             <div class="button-container">
-                <button id='aleatorio' class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
-                    <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
-                    Sortear amigo
-                </button>
+                <div>
+                        <button id='aleatorio' class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+                        <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
+                        Sortear amigo
+                    </button>
+                </div>
+                <div>
+                    <button id="reinicio" class="button-draw" onclick="reiniciar()">
+                    <img class="reinicioImg" src="assets/restart.png" alt="Ícono para reiniciar">    
+                    Reiniciar</button>
+                </div>
+                <div>
+                    <button class="button-draw" onclick="mostrarLista()">
+                    <img class="reinicioImg" src="assets/lista.png" alt="mostrar lista">
+                    Mostrar lista</button>
+                </div>
             </div>
+            <p id="alertaAmigo" class="sorteo"></p>
         </section>
     </main>
 
